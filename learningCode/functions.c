@@ -7,8 +7,8 @@
 
 char arrayMaker();
 int main(){
-    printf("Enter a number:");
-    int size = getchar() - '0';
+    //printf("Enter a number:\n");
+    int size = 5;
     char array[size];
     for (int i = 0; i < size; i++ ){
         printf("Enter a character:");
