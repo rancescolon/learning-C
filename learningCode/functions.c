@@ -7,15 +7,16 @@
 
 char arrayMaker();
 int main(){
-    //printf("Enter a number:\n");
-    int size = 5;
+    printf("Enter a number:");
+    int size = getchar() - '0';
+    getchar();// take in enterKey
     char array[size];
     for (int i = 0; i < size; i++ ){
         printf("Enter a character:");
         array[i] = arrayMaker();
 
     }
-    printf("the elements in the array are [");
+    printf("The elements in the array are [");
     for (int i = 0; i < size; i++){
         printf("%c,",array[i]);
     }
