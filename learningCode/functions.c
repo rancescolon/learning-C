@@ -5,31 +5,46 @@
 #include "stdio.h"
 
 
-char arrayMaker();
+char getUserInput();
+
+int validChar(char out);
+
 int main(){
     printf("Enter a number:");
     int size = getchar() - '0';
-    getchar();// take in enterKey
+    getchar();// clear buffer
     char array[size];
     for (int i = 0; i < size; i++ ){
-        printf("Enter a character:");
-        array[i] = arrayMaker();
-
+        array[i] = getUserInput();
     }
     printf("The elements in the array are [");
     for (int i = 0; i < size; i++){
-        printf("%c,",array[i]);
+        if(array[i] == ','){
+            printf("%c,",array[i+1]);
+        }
+        else {
+            printf("%c,", array[i]);
+        }
     }
     printf("]");
 }
 
-char arrayMaker(){
-    char out;
-    out = getchar();
-
-    if (out != '\n'){
-        arrayMaker();
+char getUserInput(){
+    printf("Enter a character:");
+    char out = getchar();
+    getchar();
+    int check = validChar(out);
+    if (check == 1){
+        printf("invalid character\n");
+        getUserInput();
+        out = ',';
     }
-
     return out;
 }
+
+int validChar(char out) {
+    if (out == '\n'||out == ' '|| out == '\t'){return 1;}
+
+    else{return 0;}
+}
+
