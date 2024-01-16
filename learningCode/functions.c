@@ -4,9 +4,7 @@
 
 #include "stdio.h"
 
-
 char getUserInput();
-
 int validChar(char out);
 
 int main(){

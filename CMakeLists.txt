@@ -8,7 +8,8 @@ set(CMAKE_C_STANDARD 11)
 
 
 
-add_executable(new_target learningCode/print.c)
+add_executable(new_target learningCode/print.c
+)
 
 
 
