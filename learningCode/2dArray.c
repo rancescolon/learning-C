@@ -9,11 +9,26 @@ char monthChecker(int month);
 
 int main(){
 
-    int array[2][3] = {
-            {3,18,04},
-            {9,23,04}
-    };
-    printf("Nour was born on ");
+    int array[1][3];
+
+    printf("Enter you birth month:\n");
+
+    int month =  getchar() - '0';
+    array[0][0] = month;
+    getchar();
+
+    printf("Enter what day that month:\n");
+
+    int day = getchar() - '0';
+    array[0][1] = day;
+    getchar();
+
+    printf("Enter what year:\n");
+
+    int year = getchar() - '0';
+    array[0][2] = year;
+
+    printf("Your were born on ");
     monthChecker(array[0][0]);
     printf(" %d, 200%d", array[0][1], array[0][2]);
 }
