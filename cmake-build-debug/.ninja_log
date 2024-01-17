@@ -1,9 +1,10 @@
 # ninja log v5
-284	439	1703277883392972753	C_Learning	dee2b51688d35d84
-0	54	1705344557852713201	build.ninja	cec7f61359f1fb6c
-0	109	1704860560133450517	new_target	9fa176b3d63e397a
-0	142	1704860528674329917	CMakeFiles/new_target.dir/learningCode/print.c.o	b569d6eb65ea73b7
-324	455	1704911345682632086	new_target1	e1878acee4bea778
-4	323	1704911345551586313	CMakeFiles/new_target1.dir/learningCode/array.c.o	55bbec750c1d5d86
+0	148	1705463860876041446	CMakeFiles/new_target.dir/learningCode/2dArray.c.o	3070f8290d155b16
 1	142	1704860528674325626	CMakeFiles/new_target.dir/learningCode/functions.c.o	3f5b3aee42ca452d
 1	215	1705344537119248439	CMakeFiles/new_target.dir/learningCode/switch.c.o	eb07498c0538912e
+4	323	1704911345551586313	CMakeFiles/new_target1.dir/learningCode/array.c.o	55bbec750c1d5d86
+324	455	1704911345682632086	new_target1	e1878acee4bea778
+0	142	1704860528674329917	CMakeFiles/new_target.dir/learningCode/print.c.o	b569d6eb65ea73b7
+0	213	1705463791118811885	new_target	9fa176b3d63e397a
+1	64	1705463873635049338	build.ninja	cec7f61359f1fb6c
+284	439	1703277883392972753	C_Learning	dee2b51688d35d84
