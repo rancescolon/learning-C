@@ -6,34 +6,34 @@
 
 char monthChecker(int month);
 
+int inputGetter();
+
+
+
 
 int main(){
 
     int array[1][3];
+    printf("enter everything in MM/DD/YYYY format\n");
 
-    printf("Enter you birth month:\n");
 
-    int month =  getchar() - '0';
+    printf("Enter you birth month: \n");
+    int month = inputGetter();
     array[0][0] = month;
-    getchar();
+
 
     printf("Enter what day that month:\n");
-
-    int day = getchar() - '0';
+    int day = inputGetter();
     array[0][1] = day;
-    getchar();
 
     printf("Enter what year:\n");
-
-    int year = getchar() - '0';
+    int year = inputGetter();
     array[0][2] = year;
 
     printf("Your were born on ");
     monthChecker(array[0][0]);
-    printf(" %d, 200%d", array[0][1], array[0][2]);
+    printf(" %d, %d", array[0][1], array[0][2]);
 }
-
-
 
 char monthChecker(int month){
     switch (month) {
@@ -78,3 +78,22 @@ char monthChecker(int month){
             break;
     }
 }
+
+int inputGetter() {
+    int input = 0 ,i ;// i is set to the right most char each loop
+
+    while ((i = getchar()) != EOF && i != '\n') {
+        i -= '0';// Convert character to integer
+        input = (input * 10) + i;
+
+    }
+    return input;
+}
+
+
+
+
+
+
+
+
