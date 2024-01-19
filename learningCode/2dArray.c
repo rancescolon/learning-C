@@ -4,38 +4,33 @@
 
 #include "stdio.h"
 
-char monthChecker(int month);
-
+void monthPrinter(int month);
+void dayPrinter(int day);
 int inputGetter();
-
-
-
 
 int main(){
 
-    int array[1][3];
-    printf("enter everything in MM/DD/YYYY format\n");
-
+    int array[1][3];//array[number of arrays][size of each array]
+    printf("enter in MM/DD/YYYY format\n");
 
     printf("Enter you birth month: \n");
-    int month = inputGetter();
-    array[0][0] = month;
+    array[0][0] = inputGetter();
 
 
     printf("Enter what day that month:\n");
-    int day = inputGetter();
-    array[0][1] = day;
+    array[0][1] = inputGetter();
 
     printf("Enter what year:\n");
-    int year = inputGetter();
-    array[0][2] = year;
+    array[0][2] = inputGetter();
 
     printf("Your were born on ");
-    monthChecker(array[0][0]);
-    printf(" %d, %d", array[0][1], array[0][2]);
+    monthPrinter(array[0][0]);
+    dayPrinter(array[0][1]);
+    printf(" on the year %d", array[0][2]);
+
 }
 
-char monthChecker(int month){
+void monthPrinter(int month){
     switch (month) {
         case 1:
             printf("January");
@@ -74,26 +69,37 @@ char monthChecker(int month){
             printf("December");
             break;
         default:
-            printf("Invalid month\n");
+            printf("Invalid month");
             break;
     }
 }
 
-int inputGetter() {
-    int input = 0 ,i ;// i is set to the right most char each loop
+void dayPrinter(int day){
+    int i = day;
+    if (day >= 10){i = i % 10;}
+    if (day >= 10 && day <= 13){i = 0;}
+    switch (i) {
+        case 1:
+            printf(" %dst,",day);
+            break;
+        case 2:
+            printf(" %dnd,",day);
+            break;
+        case 3:
+            printf(" %drd,",day);
+            break;
+        default:
+            printf(" %dth,",day);
+            break;
+    }
+    if (i > 1) {printf(" Invalid day,");}
+}
 
-    while ((i = getchar()) != EOF && i != '\n') {
+int inputGetter() {//
+    int input = 0 , i;// i is set to the right most char each loop
+    while (((i = getchar()) != EOF) && (i != '\n')) {
         i -= '0';// Convert character to integer
         input = (input * 10) + i;
-
     }
     return input;
 }
-
-
-
-
-
-
-
-

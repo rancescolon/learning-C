@@ -9,7 +9,6 @@ int main(){
     while((input = getchar()) != EOF){
         if (input == ' '||input == '\n'||input =='\t'){
             state = OUTWORD;
-
         } else if(state == OUTWORD) {
             state = INWORD;
             wordCount++;

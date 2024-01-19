@@ -12,8 +12,8 @@ int main() {
             if (array[i] == input) { count++; }
         }
         printf("count: %d\n", count);
-        count = 0;
     }
+
 }
 
 
