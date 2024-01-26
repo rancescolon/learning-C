@@ -26,7 +26,7 @@ int main(){
     printf("Your were born on ");
     monthPrinter(array[0][0]);
     dayPrinter(array[0][1]);
-    printf(" on the year %d", array[0][2]);
+    printf(" in the year %d", array[0][2]);
 
 }
 
@@ -92,7 +92,6 @@ void dayPrinter(int day){
             printf(" %dth,",day);
             break;
     }
-   // if (i > 1) {printf(" Invalid day,");}
 }
 
 int inputGetter() {//
