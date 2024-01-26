@@ -92,7 +92,7 @@ void dayPrinter(int day){
             printf(" %dth,",day);
             break;
     }
-    if (i > 1) {printf(" Invalid day,");}
+   // if (i > 1) {printf(" Invalid day,");}
 }
 
 int inputGetter() {//
